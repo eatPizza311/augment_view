@@ -3,7 +3,7 @@ function init() {
     const fileReader = new FileReader()
 
     fileReader.onloadend = () => {
-        const base64 = fileReader.result.replace(
+        let base64 = fileReader.result.replace(
             /^data:image\/(png|jpeg|jpg);base64,/, ''
         )
         console.log(input.files[0])
