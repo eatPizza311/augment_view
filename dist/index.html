@@ -1,0 +1,36 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Image Effects</title><link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"><style>h1 {
+            font-family: 'Pacifico', cursive;
+        }
+
+        .radio-first {
+            flex: 1 1 calc(25% - 10px);
+        }
+
+        .radio-second {
+            flex: 1 1 calc(25% - 10px);
+            padding-bottom: 10px;
+        }
+
+        .bg {
+            animation: slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, #ACFFAD 50%, #50CB93 50%);
+        }
+
+        .bg:nth-child(2) {
+            animation-direction: alternate-reverse;
+            animation-duration: 4s;
+        }
+
+        .bg:nth-child(3) {
+            animation-duration: 5s;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-25%);
+            }
+
+            100% {
+                transform: translateX(25%);
+            }
+        }</style><script defer="defer" src="index.js"></script></head><body><div class="bg fixed inset-y-0 -inset-x-2/4 opacity-50 z-0 bg-gradient-to-r from-yellow-400 to-pink-500"></div><div class="bg fixed inset-y-0 -inset-x-2/4 opacity-50 z-0 bg-gradient-to-r from-yellow-400 to-pink-500"></div><div class="bg fixed inset-y-0 -inset-x-2/4 opacity-50 z-0 bg-gradient-to-r from-yellow-400 to-pink-500"></div><div class="flex items-center justify-center h-screen relative z-100"><div class="bg-white bg-opacity-95 border shadow-lg p-10 text-center max-w-2xl"><h1 class="text-5xl mb-8">AugmentView</h1><p class="mb-4">Wanna see some basic image augmentation? Just upload your image below. We'll take care of the rest.</p><form id="radioForm" style="display: flex; flex-wrap: wrap; gap: 10px;"><div class="radio-first"><input type="radio" id="option1" name="options" value="grayscale"> <label for="option1">Grayscale</label></div><div class="radio-first"><input type="radio" id="option2" name="options" value="blur"> <label for="option2">Blur</label></div><div class="radio-first"><input type="radio" id="option3" name="options" value="fliph"> <label for="option3">H-filp</label></div><div class="radio-first"><input type="radio" id="option4" name="options" value="flipv"> <label for="option4">V-flip</label></div><div class="radio-second"><input type="radio" id="option5" name="options" value="huerotate"> <label for="option5">Color</label></div><div class="radio-second"><input type="radio" id="option6" name="options" value="rotate90"> <label for="option6">Rotation</label></div><div class="radio-second"><input type="radio" id="option7" name="options" value="brighten"> <label for="option7">Brightness</label></div><div class="radio-second"><input type="radio" id="option8" name="options" value="crop_imm"> <label for="option8">Crop</label></div></form><label class="bg-pink-600	text-white w-full p-6 block cursor-pointer font-bold mb-4"><input type="file" id="upload" accept=".png" class="hidden"> Upload PNG Image</label><div class="flex flex-wrap justify-center"><div class="w-1/2 p-2"><div id="original-img-caption" class="font-bold mb-2"></div><img id="original-img" class="w-full"></div><div class="w-1/2 p-2"><div id="new-img-caption" class="font-bold mb-2"></div><img id="new-img" class="w-full"></div></div><div id="explanation" class="font-bold mb-2"></div></div></div></body></html>

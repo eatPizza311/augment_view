@@ -1,7 +1,7 @@
 use base64::prelude::*;
 use std::io::Cursor;
 
-use image::{load_from_memory, GenericImageView, ImageFormat::Png};
+use image::{load_from_memory, ImageFormat::Png};
 use wasm_bindgen::prelude::wasm_bindgen;
 use web_sys::console::log_1 as log;
 
