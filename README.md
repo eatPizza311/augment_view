@@ -1,5 +1,5 @@
 # AugmentView 👁️ [Try it!](https://augment-view.vercel.app/)
-![圖片](https://github.com/user-attachments/assets/62724171-5515-452f-a4b4-dc215a3dc730)
+![無標題-2024-09-19-2309(1)](https://github.com/user-attachments/assets/624a8d8e-95ac-4d28-90a4-2caa76487b4b)
 
 # Overview:
 `AugmentView` is a dynamic and interactive application designed to help users visualize and understand various image data augmentation techniques. 
